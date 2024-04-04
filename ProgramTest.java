@@ -1,5 +1,5 @@
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -38,5 +38,24 @@ public class ProgramTest {
         boolean isPrime = Program.IsPrime(10);
 
         assertFalse(isPrime);
+    }
+
+    @Test
+    public void IsPrime_IsNumber9_ReturnFalse()
+    {
+        // Arrange
+
+        // Act
+        boolean isPrime = Program.IsPrime(9);
+
+        assertFalse(isPrime);
+    }
+
+    @Test
+    public void Special_Input2023_ThrowException() {
+        // Arrange
+
+        // Act + Assert
+        assertThrows(NullPointerException.class, () -> Program.Special(2023));
     }
 }

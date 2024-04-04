@@ -16,11 +16,19 @@ public class Program {
         if (number < 2)
             return false;
 
-        for (int i = 2; i < Math.sqrt(number); i++) {
+        for (int i = 2; i <= Math.sqrt(number); ++i) {
             if (number % i == 0) {
                 return false;
             }
         }
         return true;
+    }
+
+    public static void Special(int x) {
+        if (x == 2023) {
+            throw new NullPointerException("Special");
+        } else {
+            System.out.println(x);
+        }
     }
 }
